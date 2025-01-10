@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
 
     private void Start ()
     {
-        
+        _numSeedsLeft = 5;
+        _numSeedsPlanted = 0;
     }
 
     private void Update()
@@ -43,6 +44,15 @@ public class Player : MonoBehaviour
 
     public void PlantSeed ()
     {
-        
+        //Updates Number of Seeds to Preset Variables _NumSeedsLeft and _numSeedsPlanted.
+        _numSeedsLeft = _numSeedsLeft - 1;
+        _numSeedsPlanted = _numSeedsPlanted + 1;
+        Debug.Log(_numSeeds);
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+        if (_numSeeds = 0)
+        {
+            Debug.Log("Seeds are depleted!");
+            break;
+        }
     }
 }

@@ -26,8 +26,11 @@ How Objects affect each other
 - When Player presses plant key, a plant game object spawns in the location of the player. Then, it updates the UI text based on how many plant has been planted. 
 - Player Spawns Plant
 - Plant Updates UI 
+
+(Google Document Link)[https://docs.google.com/document/d/1P3CePD4Y1e1deg4QLqAwfXm7iTLPoqPE0LJLTW0kySo/edit?tab=t.0]
 --------------------------
 
+Comparing the Breakdown Activity to the the Actual Project, I think that 
 
 
 
