@@ -10,6 +10,27 @@ Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lectur
 
 Write your Devlog here!
 
+--------------------------
+GDIM 32: Week 1 Homework 1 Break Down Activity
+
+Objects
+- UI: 2 Texts that displays Seeds that can be planted/have been planted
+- Cat(Player)
+- Plant 
+
+Attributes & Actions
+- Cat’s Movement (WASD Keys)
+- Plant being planted (Space Key)
+
+How Objects affect each other
+- When Player presses plant key, a plant game object spawns in the location of the player. Then, it updates the UI text based on how many plant has been planted. 
+- Player Spawns Plant
+- Plant Updates UI 
+--------------------------
+
+
+
+
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
