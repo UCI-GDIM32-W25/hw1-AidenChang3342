@@ -27,10 +27,18 @@ How Objects affect each other
 - Player Spawns Plant
 - Plant Updates UI 
 
-[Google Document Link](https://docs.google.com/document/d/1P3CePD4Y1e1deg4QLqAwfXm7iTLPoqPE0LJLTW0kySo/edit?tab=t.0)
+[Google Document to Breakdown Link](https://docs.google.com/document/d/1P3CePD4Y1e1deg4QLqAwfXm7iTLPoqPE0LJLTW0kySo/edit?tab=t.0)
 --------------------------
+Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
 
-Comparing the Breakdown Activity to the the Actual Project, I think that 
+Comparing the Breakdown Activity to the the Actual Project, most of my breakdown was directly linked to my Code. Starting with one of the major objects the player notices: The Player Character. They are able to move with WASD keys thanks to "GetKey" Methods which translate the player's position in relation to speed and the time. Then, one other action the player can take is using the SPACE key to plant. 
+
+I used the specific method "GetKeyDown" on the space key so that the UI does not get updated if you just hold down the key, and only registers the one time you actually pressed the button. When the Space key was pressed, it calls the method PlantSeed(). Therefore, the 2 actions the player can do was established within the Player.cs Script. 
+
+When calling the method PlantSeed(), This relates to how objects affect each other, where PlantSeed() will update the variables _numSeedsLeft and _numSeedsPlanted for not only checking if there is a possible plant that can be planted, BUT ALSO in relation to updating the UI. Within the method, I created an if statement to first check if the plants planted was less or equal to 5, then called the method in another file(PlantCountUI) to update the actual plant count to change the UI's text. Of course, before updating the UI's text, I made sure to call the Instantiate method of the plant prefab on the player's positiion first. 
+
+This is very simple game overall, so the number objects and actions are very little(thankfully). It was overall pretty easy to account for all the actions and objects within the game. 
+
 
 
 

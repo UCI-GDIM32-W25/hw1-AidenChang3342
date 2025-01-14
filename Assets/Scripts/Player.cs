@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         {
             _playerTransform.Translate(Vector3.right * _speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))//Changed so that it doesn't update the plant UI to be as long as it is held
         {
             PlantSeed();
         }
@@ -47,12 +47,14 @@ public class Player : MonoBehaviour
         //Updates Number of Seeds to Preset Variables _NumSeedsLeft and _numSeedsPlanted.
         _numSeedsLeft = _numSeedsLeft - 1;
         _numSeedsPlanted = _numSeedsPlanted + 1;
-        Debug.Log(_numSeeds);
-        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
-        if (_numSeeds = 0)
+        if (_numSeedsPlanted <= 5)
+        {
+            Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
+            _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+            
+        }else 
         {
             Debug.Log("Seeds are depleted!");
-            break;
         }
     }
 }
