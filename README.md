@@ -1,16 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/MjLLqDcN)
 # HW1
 ## W1L2 In-Class Activity
-
-Put your notes from the W1L2 (Thurs, Jan 9) in-class activity here.
-
-## Devlog
-Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
-
-
-Write your Devlog here!
-
---------------------------
 GDIM 32: Week 1 Homework 1 Break Down Activity
 
 Objects
@@ -28,9 +18,8 @@ How Objects affect each other
 - Plant Updates UI 
 
 [Google Document to Breakdown Link](https://docs.google.com/document/d/1P3CePD4Y1e1deg4QLqAwfXm7iTLPoqPE0LJLTW0kySo/edit?tab=t.0)
---------------------------
-Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
 
+## Devlog
 Comparing the Breakdown Activity to the the Actual Project, most of my breakdown was directly linked to my Code. Starting with one of the major objects the player notices: The Player Character. They are able to move with WASD keys thanks to "GetKey" Methods which translate the player's position in relation to speed and the time. Then, one other action the player can take is using the SPACE key to plant. 
 
 I used the specific method "GetKeyDown" on the space key so that the UI does not get updated if you just hold down the key, and only registers the one time you actually pressed the button. When the Space key was pressed, it calls the method PlantSeed(). Therefore, the 2 actions the player can do was established within the Player.cs Script. 
@@ -39,10 +28,17 @@ When calling the method PlantSeed(), This relates to how objects affect each oth
 
 This is very simple game overall, so the number objects and actions are very little(thankfully). It was overall pretty easy to account for all the actions and objects within the game. 
 
-
-
-
-
 ## Open-Source Assets
 If you added any other outside assets, list them here!
 - [Sprout Lands sprite asset pack](https://cupnooble.itch.io/sprout-lands-asset-pack) - character and item sprites
+
+## Prof comments
+I would make sure to be careful with a sentence like this:
+
+> They are able to move with WASD keys thanks to "GetKey" Methods which translate the player's position in relation to speed and the time
+
+As I'm sure you know, the GetKey method is only used to detect input, but the Transform method is what actually translates the player. Your sentence makes it sound like GetKey is translating the player. Make sure to be super clear in your writing.
+
+I liked that you pointed out the difference between GetKey and GetKeyDown :)
+
+Thank you for formatting your breakdown correctly! However, please make sure to put things like the breakdown in the right section- I moved yours under the header (which starts with a #) that says 'W1L2 In-Class Activity'. You can also remove the prompt text. This will make the Devlog much easier for me to read.
